@@ -39,10 +39,10 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "cd web 2>/dev/null && sudo chmod -R 777 . 2>/dev/null"
+            "sudo chmod -R 777 ."
         ],
         "post-update-cmd": [
-            "cd web 2>/dev/null && drush fp"
+            "sudo chmod -R 777 ."
         ]
     },
     "extra": {
