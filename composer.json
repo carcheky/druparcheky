@@ -14,9 +14,18 @@
     }],
     "require": {
         "composer/installers": "^1.2",
+        "drupal/admin_toolbar": "^2.0",
+        "drupal/backup_migrate": "^4.1",
+        "drupal/config_devel": "^1.4",
+        "drupal/core": "^8.8",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
+        "drupal/ctools": "^3.2",
+        "drupal/devel": "^2.1",
+        "drupal/imce": "^1.7",
+        "drupal/module_filter": "^3.1",
+        "drupal/pathauto": "^1.6",
         "drupal/token": "^1.6"
     },
     "require-dev": {},
@@ -30,7 +39,7 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "cd web 2>/dev/null && drush fp"
+            "cd web 2>/dev/null && sudo chmod -R 777 . 2>/dev/null"
         ],
         "post-update-cmd": [
             "cd web 2>/dev/null && drush fp"
