@@ -28,7 +28,9 @@
         "drupal/module_filter": "^3.1",
         "drupal/pathauto": "^1.6",
         "drupal/token": "^1.6",
-        "drush/drush": "^8"
+        "drush/config-extra": "^1.0",
+        "drush/drush": "^8",
+        "mglaman/drupal-check": "^1.0"
     },
     "require-dev": {},
     "conflict": {
