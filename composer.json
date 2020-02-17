@@ -42,12 +42,18 @@
         "sort-packages": true
     },
     "scripts": {
+        "pre-install-cmd": [
+            "bash ./devscripts/composer-pre-cmd"
+        ],
+        "pre-update-cmd": [
+            "bash ./devscripts/composer-pre-cmd"
+        ],
         "post-install-cmd": [
-            "sudo chmod -R 777 ."
+            "bash ./devscripts/composer-post-cmd"
         ],
         "post-update-cmd": [
-            "sudo chmod -R 777 ."
-        ]
+            "bash ./devscripts/composer-post-cmd"
+        ],
     },
     "extra": {
         "drupal-scaffold": {
