@@ -53,7 +53,7 @@
         ],
         "post-update-cmd": [
             "bash ./devscripts/composer-post-cmd"
-        ],
+        ]
     },
     "extra": {
         "drupal-scaffold": {
