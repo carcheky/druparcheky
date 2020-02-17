@@ -1,0 +1,41 @@
+#!/bin/bash
+
+echo "==================================="
+echo "==================================="
+echo "====> composer-post-install-cmd"
+cd web
+
+echo "==> Actualizando base de datos"
+drush updb -y
+
+echo "==> Aplicando permisos"
+echo $(pwd)
+
+if [[ $(pwd) == '/var/www/html/discapnet2020.e-fti.com/web' ]]
+then
+  echo "-> estás en $(pwd)"
+  cd "/var/www/html/discapnet2020.e-fti.com/"
+  sudo chmod -R 755 .
+  sudo chown -R apache:apache .
+else
+  echo "-> drush fp"
+  drush fp
+fi
+
+echo "==> Actualizando idiomas"
+drush locale-check
+drush locale-update
+
+echo "==> Ejecutando cron"
+drush cron
+
+echo "==> Vaciando caché"
+drush cr
+
+echo "==> Viendo estado"
+drush st
+
+echo "==> Comprobando informe de estado, se mostrarán los errores a continuación (si hay)"
+drush rq --severity=2
+
+echo "==================================="
