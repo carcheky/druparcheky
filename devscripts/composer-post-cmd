@@ -22,7 +22,6 @@ then
   chmod 444 web/sites/default/settings.php
   chmod 444 web/sites/default/services.php
   
-  sudo chown -R apache:apache .
   sudo chown -R user:user .
 else
   echo "-> drush fp"
