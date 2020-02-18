@@ -58,26 +58,26 @@ cd $vhost
 
 # composer update --with-dependencies
 
-sudo chmod -R 777 .
+# sudo chmod -R 777 .
 
-cp $vhost/web/sites/default/default.settings.php $vhost/web/sites/default/settings.php
-cp $vhost/web/sites/default/default.services.yml $vhost/web/sites/default/services.yml
+# cp $vhost/web/sites/default/default.settings.php $vhost/web/sites/default/settings.php
+# cp $vhost/web/sites/default/default.services.yml $vhost/web/sites/default/services.yml
 
-sudo chmod -R 777 .
+# sudo chmod -R 777 .
 
-echo "
+# echo "
 
-\$databases['default']['default'] = array (
-  'database' => '$database',
-  'username' => '$username',
-  'password' => '$password',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-\$settings['config_sync_directory'] = '$config_dir';
+# \$databases['default']['default'] = array (
+#   'database' => '$database',
+#   'username' => '$username',
+#   'password' => '$password',
+#   'prefix' => '',
+#   'host' => 'localhost',
+#   'port' => '3306',
+#   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+#   'driver' => 'mysql',
+# );
+# \$settings['config_sync_directory'] = '$config_dir';
 
 
-" >> $site/sites/default/settings.php
+# " >> $site/sites/default/settings.php
