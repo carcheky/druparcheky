@@ -5,6 +5,13 @@
 ===================================
 
 
+estás en el site: 
+site: /mnt/c/wsl/sites/drupal-core-composer-project/web
+vhost: /mnt/c/wsl/sites/drupal-core-composer-project
+name:
+database:
+username:
+password:
 site -> /mnt/c/wsl/sites/drupal-core-composer-project/web
 vhost -> /mnt/c/wsl/sites/drupal-core-composer-project
 name -> drupal-core-composer-project
@@ -12,7 +19,8 @@ database -> drupal-core-composer-project
 username -> root
 password -> root
 config_dir -> ../config/sync
-Could not open input file: composer
+/mnt/c/wsl/sites/drupal-core-composer-project
+/mnt/c/wsl/sites/drupal-core-composer-project
 
 
 $databases['default']['default'] = array (
@@ -26,86 +34,6 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 $settings['config_sync_directory'] = '../config/sync';
-
-
-
-
-
-$databases['default']['default'] = array (
-  'database' => '',
-  'username' => '',
-  'password' => '',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-$settings['config_sync_directory'] = '';
-
-
-
-
-
-$databases['default']['default'] = array (
-  'database' => 'drupal-core-composer-project',
-  'username' => 'root',
-  'password' => 'root',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-$settings['config_sync_directory'] = '../config/sync';
-
-
-
-
-
-$databases['default']['default'] = array (
-  'database' => 'drupal-core-composer-project',
-  'username' => 'root',
-  'password' => 'root',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-$settings['config_sync_directory'] = '../config/sync';
-
-
-
-
-
-$databases['default']['default'] = array (
-  'database' => 'drupal-core-composer-project',
-  'username' => 'root',
-  'password' => 'root',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-$settings['config_sync_directory'] = '../config/sync';
-
-
-
-
-
-$databases['default']['default'] = array (
-  'database' => 'a',
-  'username' => 'a',
-  'password' => 'a',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-$settings['config_sync_directory'] = 'a';
 
 
 

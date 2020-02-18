@@ -6,5 +6,5 @@ echo "====> composer-pre-install-cmd"
 
 echo "==> Aplicando permisos 777 antes de actualizar para evitar errores"
 sudo chmod -R 777 .
-sudo chmod -R apache:apache .
+sudo chown -R user:user .
 echo "==================================="

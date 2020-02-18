@@ -20,22 +20,28 @@ else
   vhost=${site%"/web"}
 fi
 
-echo "site: $site"
-echo "vhost: $vhost"
-echo "name:"
-read name
-echo "database:"
-read database
-echo "username:"
-read username
-echo "password:"
-read password
-echo "config_dir:"
-read config_dir
+
+# echo "name:"
+# read name
+# name=drupal-core-composer-project
+
+# echo "database:"
+# read database
+database=drupal-core-composer-project
+
+# echo "username:"
+# read username
+username=root
+
+# echo "password:"
+# read password
+password=root
+
+config_dir="../config/sync"
 
 echo "site -> $site"
 echo "vhost -> $vhost"
-echo "name -> $name"
+# echo "name -> $name"
 echo "database -> $database"
 echo "username -> $username"
 echo "password -> $password"
@@ -46,9 +52,12 @@ cd $vhost
 
 git submodule init
 git submodule update
-mv *.code-workspace $site.code-workspace
+cp *.code-workspace.example $name.code-workspace
 
-composer install -d $vhost
+sudo chmod -R 777 .
+
+rm -fr vendor
+composer install
 
 cp $site/sites/default/default.settings.php $site/sites/default/settings.php
 cp $site/sites/default/default.services.php $site/sites/default/services.php
@@ -69,23 +78,3 @@ echo "
 
 
 " >> $site/sites/default/settings.php
-
-
-echo "
-
-\$databases['default']['default'] = array (
-  'database' => '$database',
-  'username' => '$username',
-  'password' => '$password',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '',
-  'namespace' => 'Drupal\\\\Core\\\\Database\\\\Driver\\\\mysql',
-  'driver' => 'mysql',
-);
-\$settings['config_sync_directory'] = '$config_dir';
-
-
-" >> $site/composer-runner.log
-
-
