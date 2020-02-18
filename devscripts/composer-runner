@@ -57,7 +57,7 @@ cp *.code-workspace.example $name.code-workspace
 sudo chmod -R 777 .
 
 rm -fr vendor
-composer install
+composer update --with-dependencies
 
 cp $site/sites/default/default.settings.php $site/sites/default/settings.php
 cp $site/sites/default/default.services.php $site/sites/default/services.php
