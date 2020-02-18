@@ -54,11 +54,8 @@ git submodule init
 git submodule update
 git submodule foreach git pull origin master
 
-cp *.code-workspace.example $name.code-workspace
-
 sudo chmod -R 777 .
 
-rm -fr vendor
 composer update --with-dependencies
 
 cp $site/sites/default/default.settings.php $site/sites/default/settings.php
