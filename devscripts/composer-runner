@@ -58,8 +58,8 @@ sudo chmod -R 777 .
 
 composer update --with-dependencies
 
-cp $site/sites/default/default.settings.php $site/sites/default/settings.php
-cp $site/sites/default/default.services.php $site/sites/default/services.php
+cp $vhost/web/sites/default/default.settings.php $vhost/web/sites/default/settings.php
+cp $vhost/web/sites/default/default.services.php $vhost/web/sites/default/services.php
 
 echo "
 
