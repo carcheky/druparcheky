@@ -52,6 +52,8 @@ cd $vhost
 
 git submodule init
 git submodule update
+git submodule foreach git pull origin master
+
 cp *.code-workspace.example $name.code-workspace
 
 sudo chmod -R 777 .
