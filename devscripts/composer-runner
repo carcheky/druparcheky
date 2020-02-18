@@ -1,0 +1,91 @@
+#!/bin/bash
+
+echo "==================================="
+echo "==================================="
+echo "========= composer-runner ========="
+echo "==================================="
+echo "==================================="
+echo ""
+echo ""
+
+
+if [ -d "web" ] && [ -f "composer.json" ];
+then
+  echo "estás en el vhost:  "
+  site="$(pwd)/web"
+  vhost=${site%"/web"}
+else
+  echo "estás en el site: "
+  site="$(pwd)"
+  vhost=${site%"/web"}
+fi
+
+echo "site: $site"
+echo "vhost: $vhost"
+echo "name:"
+read name
+echo "database:"
+read database
+echo "username:"
+read username
+echo "password:"
+read password
+echo "config_dir:"
+read config_dir
+
+echo "site -> $site"
+echo "vhost -> $vhost"
+echo "name -> $name"
+echo "database -> $database"
+echo "username -> $username"
+echo "password -> $password"
+echo "config_dir -> $config_dir"
+
+
+cd $vhost
+
+git submodule init
+git submodule update
+mv *.code-workspace $site.code-workspace
+
+composer install -d $vhost
+
+cp $site/sites/default/default.settings.php $site/sites/default/settings.php
+cp $site/sites/default/default.services.php $site/sites/default/services.php
+
+echo "
+
+\$databases['default']['default'] = array (
+  'database' => '$database',
+  'username' => '$username',
+  'password' => '$password',
+  'prefix' => '',
+  'host' => 'localhost',
+  'port' => '',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
+\$settings['config_sync_directory'] = '$config_dir';
+
+
+" >> $site/sites/default/settings.php
+
+
+echo "
+
+\$databases['default']['default'] = array (
+  'database' => '$database',
+  'username' => '$username',
+  'password' => '$password',
+  'prefix' => '',
+  'host' => 'localhost',
+  'port' => '',
+  'namespace' => 'Drupal\\\\Core\\\\Database\\\\Driver\\\\mysql',
+  'driver' => 'mysql',
+);
+\$settings['config_sync_directory'] = '$config_dir';
+
+
+" >> $site/composer-runner.log
+
+

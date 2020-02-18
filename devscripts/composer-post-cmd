@@ -14,9 +14,16 @@ echo $(pwd)
 if [[ $(pwd) == '/var/www/html/discapnet2020.e-fti.com/web' ]]
 then
   echo "-> estás en $(pwd)"
-  cd "/var/www/html/discapnet2020.e-fti.com/"
-  sudo chmod -R 755 .
+  # sudo chmod -R 755 .
+  find . -type d -exec sudo chmod -R 755 {} \\;
+  find . -type f -exec sudo chmod -R 644 {} \\;
+  
+  chmod 555 web/sites/default
+  chmod 444 web/sites/default/settings.php
+  chmod 444 web/sites/default/services.php
+  
   sudo chown -R apache:apache .
+  sudo chown -R user:user .
 else
   echo "-> drush fp"
   drush fp
