@@ -50,16 +50,20 @@ echo "config_dir -> $config_dir"
 
 cd $vhost
 
-git submodule init
-git submodule update
-git submodule foreach git pull origin master
+# git submodule init
+# git submodule update
+# git submodule foreach git pull origin master
+
+# sudo chmod -R 777 .
+
+# composer update --with-dependencies
 
 sudo chmod -R 777 .
 
-composer update --with-dependencies
-
 cp $vhost/web/sites/default/default.settings.php $vhost/web/sites/default/settings.php
-cp $vhost/web/sites/default/default.services.php $vhost/web/sites/default/services.php
+cp $vhost/web/sites/default/default.services.yml $vhost/web/sites/default/services.yml
+
+sudo chmod -R 777 .
 
 echo "
 
