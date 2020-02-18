@@ -8,9 +8,7 @@ echo "==================================="
 echo ""
 echo ""
 
-
-if [ -d "web" ] && [ -f "composer.json" ];
-then
+if [ -d "web" ] && [ -f "composer.json" ]; then
   echo "estás en el vhost:  "
   site="$(pwd)/web"
   vhost=${site%"/web"}
@@ -20,10 +18,9 @@ else
   vhost=${site%"/web"}
 fi
 
-
 # echo "name:"
 # read name
-# name=drupal-core-composer-project
+name=drupal-core-composer-project
 
 # echo "database:"
 # read database
@@ -41,43 +38,49 @@ config_dir="../config/sync"
 
 echo "site -> $site"
 echo "vhost -> $vhost"
-# echo "name -> $name"
+echo "name -> $name"
 echo "database -> $database"
 echo "username -> $username"
 echo "password -> $password"
 echo "config_dir -> $config_dir"
 
-
 cd $vhost
-
-# git submodule init
-# git submodule update
-# git submodule foreach git pull origin master
-
+echo "corrigiendo permisos"
 # sudo chmod -R 777 .
+# sudo chown -R user:user .
 
+echo "composer update --with-dependencies"
 # composer update --with-dependencies
 
-# sudo chmod -R 777 .
+echo ""
 
-# cp $vhost/web/sites/default/default.settings.php $vhost/web/sites/default/settings.php
-# cp $vhost/web/sites/default/default.services.yml $vhost/web/sites/default/services.yml
+echo "generate theme"
+cd $site/themes/custom/druparcheky_theme
+echo $name
+echo $site
+bash $vhost/devscripts/theme-generate $name $site
+exit
 
-# sudo chmod -R 777 .
+cd $vhost
+echo "borrando carpetas .git..."
+find ./ -name .git -type d -exec rm -fr {} \;
+rm .gitignore .gitmodules
 
-# echo "
+cd $site
+# drush si druparcheky --db-url=mysql://root:root@localhost/$site --account-name=admin --account-mail=admin@$site.test --account-pass=admin --site-name=$site --site-mail=$site@$site.test -y --locale=es
+drush si minimal --db-url=mysql://$username:$password@localhost/$database --account-name=admin --account-mail=admin@$site.test --account-pass=admin --site-name=$site --site-mail=$site@$site.test -y --locale=es
 
-# \$databases['default']['default'] = array (
-#   'database' => '$database',
-#   'username' => '$username',
-#   'password' => '$password',
-#   'prefix' => '',
-#   'host' => 'localhost',
-#   'port' => '3306',
-#   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-#   'driver' => 'mysql',
-# );
-# \$settings['config_sync_directory'] = '$config_dir';
+echo "inicializando git..."
+cp example.gitignore .gitignore
+git init
 
+sudo chmod -R 777 .
+drush fp
 
-# " >> $site/sites/default/settings.php
+echo "
+
+\$settings['config_sync_directory'] = '$config_dir';
+
+" >> $site/sites/default/settings.php
+
+echo "terminado, haga el primer commit"
