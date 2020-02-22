@@ -1,0 +1,19 @@
+uuid: fd33a167-50e2-4fe9-90df-e4808888f50c
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: eRtQOCa8phyH2dX53aFVf36ptpOH4FHAfNAM48z5Ihw
+id: authenticated
+label: 'Usuario autenticado'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use text format basic_html'

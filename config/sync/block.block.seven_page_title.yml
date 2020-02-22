@@ -1,0 +1,20 @@
+uuid: 4ddc598e-bd17-4a6d-ab04-a797a6b0afb0
+langcode: es
+status: true
+dependencies:
+  theme:
+    - seven
+_core:
+  default_config_hash: zpGvdM8h37Wr2qAITOSJpy7cLTit-RC0igLh7rQFnP0
+id: seven_page_title
+theme: seven
+region: header
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Título de la página'
+  provider: core
+  label_display: '0'
+visibility: {  }

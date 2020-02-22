@@ -1,0 +1,22 @@
+uuid: 1b438d8e-169b-47bf-978b-6ee334517ee5
+langcode: es
+status: true
+dependencies:
+  theme:
+    - druparcheky_theme
+_core:
+  default_config_hash: 5PpF95eippNGOGoakldQhDxvVyMOfDFGwtie2dCRiS0
+id: druparcheky_theme_local_tasks
+theme: druparcheky_theme
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Pestañas
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
