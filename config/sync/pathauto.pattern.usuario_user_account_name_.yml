@@ -1,0 +1,16 @@
+uuid: 76a53f4b-a4a8-4bab-9a59-45b5eea13442
+langcode: es
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: 4MXfjCU2h-CujBQdzALGpK13Ph2xAxnwgWrj3m0U66c
+id: usuario_user_account_name_
+label: 'usuario/[user:account-name]'
+type: 'canonical_entities:user'
+pattern: 'usuario/[user:account-name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }
