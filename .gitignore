@@ -2,6 +2,7 @@
 .editorconfig
 .gitattributes
 .composer.lock
+drupaccessible.code-workspace
 
 /log
 
