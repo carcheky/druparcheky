@@ -1,7 +1,7 @@
 /vendor/
 .editorconfig
 .gitattributes
-.composer.lock
+composer.lock
 drupaccessible.code-workspace
 
 /log
@@ -17,12 +17,14 @@ drupaccessible.code-workspace
 /web/INSTALL.txt
 /web/README.txt
 /web/autoload.php
-/web/example.gitignore
 /web/index.php
 /web/robots.txt
 /web/update.php
 /web/web.config
 /web/core
+
+
+/web/sites
 
 /web/sites/*/default.services.yml
 /web/sites/*/default.settings.php
@@ -38,5 +40,7 @@ drupaccessible.code-workspace
 /web/sites/*/files/**/.htaccess
 /web/sites/README.txt
 /web/sites/development.services.yml
-/web/sites/example.settings.local.php
-/web/sites/example.sites.php
+
+example*
+
+*.sql
