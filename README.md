@@ -1,4 +1,6 @@
-# druparcheky-core-composer-project
+# WORK IN PROGRESS!!!
+
+## carcheky/druparcheky-core-composer-project
 
 Composer project to quick start develop
 
