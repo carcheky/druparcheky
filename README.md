@@ -8,3 +8,9 @@ Composer project to quick start develop
 
 - clone repo
 - composer install
+
+
+
+
+
+composer require drupal/admin_toolbar drupal/backup_migrate drupal/config_devel drupal/ctools drupal/devel drupal/imce drupal/layout_section_classes drupal/module_filter drupal/pathauto drupal/token
