@@ -1,9 +1,0 @@
-[submodule "web/profiles/custom/druparcheky_profile"]
-	path = web/profiles/custom/druparcheky_profile
-	url = https://github.com/carcheky/druparcheky_profile.git
-[submodule "web/themes/custom/druparcheky_theme"]
-	path = web/themes/custom/druparcheky_theme
-	url = https://github.com/carcheky/druparcheky_theme.git
-[submodule "web/modules/custom/responsible"]
-	path = web/modules/custom/responsible
-	url = https://github.com/carcheky/responsible.git
