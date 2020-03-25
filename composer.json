@@ -69,16 +69,16 @@
     },
     "scripts": {
         "pre-install-cmd": [
-            "bash ./devscripts/composer-pre-install"
+            "bash ./scripts/composer-pre-install"
         ],
         "pre-update-cmd": [
-            "bash ./devscripts/composer-pre-install"
+            "bash ./scripts/composer-pre-install"
         ],
         "post-install-cmd": [
-            "bash ./devscripts/composer-post-install"
+            "bash ./scripts/composer-post-install"
         ],
         "post-update-cmd": [
-            "bash ./devscripts/composer-post-install"
+            "bash ./scripts/composer-post-install"
         ]
     },
     "extra": {
