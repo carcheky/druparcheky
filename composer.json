@@ -17,7 +17,7 @@
             "package": {
                 "name": "carcheky/druparcheky_profile",
                 "version": "dev-master",
-                "type": "drupal-profile",
+                "type": "drupal-custom-profile",
                 "source": {
                     "url": "https://github.com/carcheky/druparcheky_profile.git"
                     "type": "git",
@@ -30,7 +30,7 @@
             "package": {
                 "name": "carcheky/druparcheky_theme",
                 "version": "dev-master",
-                "type": "drupal-theme",
+                "type": "drupal-custom-theme",
                 "source": {
                     "url": "https://github.com/carcheky/druparcheky_theme.git"
                     "type": "git",
@@ -52,7 +52,9 @@
         "drupal/layout_section_classes": "^1.0@RC",
         "drupal/module_filter": "3.1.0",
         "drupal/pathauto": "1.6.0",
-        "drupal/token": "1.6.0"
+        "drupal/token": "1.6.0",
+        "carcheky/druparcheky_profile" : "dev-master",
+        "carcheky/druparcheky_theme" : "dev-master"
     },
     "require-dev": {},
     "conflict": {
