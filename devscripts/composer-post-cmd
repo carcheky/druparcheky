@@ -1,47 +1,47 @@
 #!/bin/bash
 
-echo "==================================="
-echo "==================================="
-echo "====> composer-post-install-cmd"
-cd web
+# echo "==================================="
+# echo "==================================="
+# echo "====> composer-post-install-cmd"
+# cd web
 
-echo "==> Actualizando base de datos"
-drush updb -y
+# echo "==> Actualizando base de datos"
+# drush updb -y
 
-echo "==> Aplicando permisos"
-echo $(pwd)
+# echo "==> Aplicando permisos"
+# echo $(pwd)
 
-if [[ $(pwd) == '/var/www/html/discapnet2020.e-fti.com/web' ]]
-then
-  echo "-> estás en $(pwd)"
-  # sudo chmod -R 755 .
-  find . -type d -exec sudo chmod -R 755 {} \\;
-  find . -type f -exec sudo chmod -R 644 {} \\;
-  
-  chmod 555 web/sites/default
-  chmod 444 web/sites/default/settings.php
-  chmod 444 web/sites/default/services.php
-  
-  sudo chown -R user:user .
-else
-  echo "-> drush fp"
-  drush fp
-fi
+# if [[ $(pwd) == '/var/www/html/discapnet2020.e-fti.com/web' ]]
+# then
+#   echo "-> estás en $(pwd)"
+#   # sudo chmod -R 755 .
+#   find . -type d -exec sudo chmod -R 755 {} \\;
+#   find . -type f -exec sudo chmod -R 644 {} \\;
 
-echo "==> Actualizando idiomas"
-drush locale-check
-drush locale-update
+#   chmod 555 web/sites/default
+#   chmod 444 web/sites/default/settings.php
+#   chmod 444 web/sites/default/services.php
 
-echo "==> Ejecutando cron"
-drush cron
+#   sudo chown -R user:user .
+# else
+#   echo "-> drush fp"
+#   drush fp
+# fi
 
-echo "==> Vaciando caché"
-drush cr
+# echo "==> Actualizando idiomas"
+# drush locale-check
+# drush locale-update
 
-echo "==> Viendo estado"
-drush st
+# echo "==> Ejecutando cron"
+# drush cron
 
-echo "==> Comprobando informe de estado, se mostrarán los errores a continuación (si hay)"
-drush rq --severity=2
+# echo "==> Vaciando caché"
+# drush cr
 
-echo "==================================="
+# echo "==> Viendo estado"
+# drush st
+
+# echo "==> Comprobando informe de estado, se mostrarán los errores a continuación (si hay)"
+# drush rq --severity=2
+
+# echo "==================================="
