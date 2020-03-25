@@ -13,17 +13,31 @@
             "url": "https://packages.drupal.org/8"
         },
         {
-            "type": "vcs",
-            "url": "https://github.com/carcheky/druparcheky_profile.git"
+            "type": "package",
+            "package": {
+                "name": "carcheky/druparcheky_profile",
+                "version": "dev-master",
+                "type": "drupal-profile",
+                "source": {
+                    "url": "https://github.com/carcheky/druparcheky_profile.git"
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
         },
         {
-            "type": "vcs",
-            "url": "https://github.com/carcheky/druparcheky_theme.git"
+            "type": "package",
+            "package": {
+                "name": "carcheky/druparcheky_theme",
+                "version": "dev-master",
+                "type": "drupal-theme",
+                "source": {
+                    "url": "https://github.com/carcheky/druparcheky_theme.git"
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
         },
-        {
-            "type": "vcs",
-            "url": "https://github.com/carcheky/responsible.git"
-        }
     ],
     "require": {
         "composer/installers": "1.8.0",
