@@ -9,9 +9,22 @@
         "chat": "https://www.drupal.org/node/314178"
     },
     "repositories": [{
-        "type": "composer",
-        "url": "https://packages.drupal.org/8"
-    }],
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/carcheky/druparcheky_profile.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/carcheky/druparcheky_theme.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/carcheky/responsible.git"
+        }
+    ],
     "require": {
         "composer/installers": "1.8.0",
         "drupal/core-composer-scaffold": "8.8.4",
@@ -27,8 +40,7 @@
         "drupal/pathauto": "1.6.0",
         "drupal/token": "1.6.0"
     },
-    "require-dev": {
-    },
+    "require-dev": {},
     "conflict": {
         "drupal/drupal": "*"
     },
