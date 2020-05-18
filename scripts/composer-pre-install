@@ -1,5 +1,3 @@
 #!/bin/bash
-
 echo "====> composer-pre-install"
 
-rm -fr profiles
