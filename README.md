@@ -4,5 +4,5 @@
 Composer project to quick start develop
 
 ````bash
-composer create-project carcheky/druparcheky-recommended-project testcomps
+composer create-project carcheky/druparcheky-recommended-project YOUR_THEME_NAME
 ````
