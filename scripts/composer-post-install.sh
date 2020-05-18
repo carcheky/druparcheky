@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "====> composer-pre-install"
+echo "====> composer-post-install"
 
 
 if [ -d "web/sites/default" ]; then
