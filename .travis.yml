@@ -7,10 +7,7 @@ cache:
 services:
   - docker
 php:
-  - 7.1
-  - 7.2
   - 7.3
-  - 7.4
 env:
   global:
     - DRUPAL_BASE_URL="http://127.0.0.1:8080"
