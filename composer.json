@@ -31,16 +31,22 @@
     },
     "scripts": {
         "pre-install-cmd": [
-            "bash ./scripts/composer-pre-install.sh"
+            "echo pre-script",
+            "chmod 775 web/sites/default"
         ],
         "pre-update-cmd": [
-            "bash ./scripts/composer-pre-install.sh"
+            "echo pre-script",
+            "chmod 775 web/sites/default"
         ],
         "post-install-cmd": [
-            "bash ./scripts/composer-post-install.sh"
+            "echo post-script",
+            "if [ -f  web/sites/default/settings.php ]; then drush updb -y; else echo no existe settings.php ; fi",
+            "if [ -f  web/sites/default/settings.php ]; then drush locale-check  2>/dev/null && drush locale-update; else echo no existe settings.php ; fi"
         ],
         "post-update-cmd": [
-            "bash ./scripts/composer-post-install.sh"
+            "echo post-script",
+            "if [ -f  web/sites/default/settings.php ]; then drush updb -y; else echo no existe settings.php ; fi",
+            "if [ -f  web/sites/default/settings.php ]; then drush locale-check  2>/dev/null && drush locale-update; else echo no existe settings.php ; fi"
         ]
     },
     "extra": {
