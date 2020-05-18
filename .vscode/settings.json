@@ -1,7 +1,10 @@
 {
-    "files.eol": "\n",
-    "git.autofetch": true,
-    "git.enableSmartCommit": true,
-    "git.fetchOnPull": true,
-    "git.postCommitCommand": "sync"
+  "files.eol": "\n",
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "git.fetchOnPull": true,
+  "git.postCommitCommand": "sync",
+  "travis.repository": "druparcheky-recommended-project",
+  "travis.username": "carcheky",
+  "travis.statusPollingInterval": 30
 }
