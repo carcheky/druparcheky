@@ -18,7 +18,8 @@
         "drush/drush": "^10.2"
     },
     "require-dev": {
-        "drupal/coder": "^8.3"
+        "drupal/coder": "^8.3",
+        "symfony/phpunit-bridge": "^5.0"
     },
     "conflict": {
         "drupal/drupal": "*"
