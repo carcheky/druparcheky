@@ -32,11 +32,11 @@
     "scripts": {
         "pre-install-cmd": [
             "echo pre-script",
-            "chmod 775 web/sites/default"
+            "if [ -d  web/sites/default ]; then chmod 775 web/sites/default ; fi"
         ],
         "pre-update-cmd": [
             "echo pre-script",
-            "chmod 775 web/sites/default"
+            "if [ -d  web/sites/default ]; then chmod 775 web/sites/default ; fi"
         ],
         "post-install-cmd": [
             "echo post-script",
