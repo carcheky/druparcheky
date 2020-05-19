@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "carcheky/druparcheky_profile": "dev-master",
+        "carcheky/druparcheky_profile": "^1.0",
         "carcheky/druparcheky_theme": "^1.0",
         "composer/installers": "1.7.0",
         "drupal/core-composer-scaffold": "^8.8",
