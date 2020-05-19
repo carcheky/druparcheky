@@ -62,8 +62,8 @@ class RoboFile extends \Robo\Tasks
             ->exec('vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer')
             ->exec('vendor/bin/phpcs --standard=Drupal web/profiles/contrib/druparcheky_profile')
             ->exec('vendor/bin/phpcs --standard=DrupalPractice web/profiles/contrib/druparcheky_profile')
-            ->exec('vendor/bin/phpcs --standard=Drupal web/themes/contrib/druparcheky_profile')
-            ->exec('vendor/bin/phpcs --standard=DrupalPractice web/themes/contrib/druparcheky_profile')
+            ->exec('vendor/bin/phpcs --standard=Drupal web/themes/contrib/druparcheky_theme')
+            ->exec('vendor/bin/phpcs --standard=DrupalPractice web/themes/contrib/druparcheky_theme')
             ->run();
     }
 
