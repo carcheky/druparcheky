@@ -20,7 +20,7 @@ before_install:
   - echo "memory_limit=2G" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
   - composer global require hirak/prestissimo
 install:
-  - composer install
+  - composer update --with-dependencies
 before_script:
   - cp .travis/RoboFile.php .
 script:

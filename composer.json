@@ -19,6 +19,7 @@
     },
     "require-dev": {
         "drupal/coder": "^8.3",
+        "php-coveralls/php-coveralls": "^2.2",
         "symfony/phpunit-bridge": "^5.0"
     },
     "conflict": {
