@@ -60,8 +60,10 @@ class RoboFile extends \Robo\Tasks
         return $this->taskExecStack()
             ->stopOnFail()
             ->exec('vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer')
-            ->exec('vendor/bin/phpcs --standard=Drupal web/modules/custom')
-            ->exec('vendor/bin/phpcs --standard=DrupalPractice web/modules/custom')
+            ->exec('vendor/bin/phpcs --standard=Drupal web/themes/contrib')
+            ->exec('vendor/bin/phpcs --standard=DrupalPractice web/themes/contrib')
+            ->exec('vendor/bin/phpcs --standard=Drupal web/profiles/contrib')
+            ->exec('vendor/bin/phpcs --standard=DrupalPractice web/profiles/contrib')
             ->run();
     }
 
