@@ -19,6 +19,7 @@ before_install:
   - echo 'sendmail_path = /bin/true' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
   - echo "memory_limit=2G" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
   - composer global require hirak/prestissimo
+  - npx semantic-release
 install:
   - composer update --with-dependencies
 before_script:
@@ -28,4 +29,4 @@ script:
 after_success:
   # - test $JOB = "job:run-unit-tests"
   # - travis_retry php vendor/bin/php-coveralls -v
-  - echo finished
+  - git tag | grep 1.0- | sort -V | tail -1
