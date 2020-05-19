@@ -20,10 +20,11 @@ before_install:
   - echo "memory_limit=2G" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
   - composer global require hirak/prestissimo
 install:
-  - composer --verbose install
+  - composer install
 before_script:
   - cp .travis/RoboFile.php .
 script:
   - vendor/bin/robo $JOB
 after_success:
-  - test $JOB = "job:run-unit-tests" && travis_retry php vendor/bin/php-coveralls -v
+  # - test $JOB = "job:run-unit-tests"
+  - travis_retry php vendor/bin/php-coveralls -v
