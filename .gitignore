@@ -44,3 +44,5 @@ drupaccessible.code-workspace
 example*
 
 *.sql
+drush/sites/*
+!drush/sites/example.self.site.yml
