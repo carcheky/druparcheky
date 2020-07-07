@@ -26,24 +26,7 @@
     "config": {
         "sort-packages": true
     },
-    "scripts": {
-        "pre-install-cmd": [
-            "echo pre-script",
-            "if [ -d  web/sites/default ]; then chmod 775 web/sites/default ; fi"
-        ],
-        "pre-update-cmd": [
-            "echo pre-script",
-            "if [ -d  web/sites/default ]; then chmod 775 web/sites/default ; fi"
-        ],
-        "post-install-cmd": [
-            "echo post-script",
-            "if [ -f  web/sites/default/settings.php ]; then drush updb -y; else echo no existe settings.php ; fi"
-        ],
-        "post-update-cmd": [
-            "echo post-script",
-            "if [ -f  web/sites/default/settings.php ]; then drush updb -y; else echo no existe settings.php ; fi"
-        ]
-    },
+    "scripts": {},
     "extra": {
         "drupal-scaffold": {
             "locations": {
